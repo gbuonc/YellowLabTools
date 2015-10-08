@@ -11,6 +11,10 @@
             <a href="" class="item" ng-class="{active: settings.device == 'tablet'}" ng-click="settings.device = 'tablet'"><div class="icon-tablet"></div>Tablet</a>
             <a href="" class="item" ng-class="{active: settings.device == 'phone'}" ng-click="settings.device = 'phone'"><div class="icon-mobile"></div>Phone</a>
         </div>
+        <div class="no-external">
+            External resources (adv, tracking etc...)
+            <a href="" class="item toggle {{settings.noExternal ? 'toggle-disabled' : 'toggle-enabled'}}" ng-class="" ng-click="settings.noExternal = !settings.noExternal"><span>{{settings.noExternal ? 'disabled' : 'enabled'}}</span></a>
+        </div>
         [ <a href="" class="showAdvanced" ng-click="settings.showAdvanced = !settings.showAdvanced">
             <span ng-if="!settings.showAdvanced">Advanced settings &nbsp;✚</span>
             <span ng-if="settings.showAdvanced">Hide advanced settings &nbsp;✖</span>

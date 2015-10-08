@@ -299,3 +299,47 @@ a.linkButton {
 [class*=" icon-"]:before {
   vertical-align: baseline;
 }
+
+.no-external{
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+  line-height: 28px;
+}
+.toggle {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    height: 12px;
+    margin: 0 4px;
+    top:8px;
+    line-height: 1;
+    box-shadow: rgba(0, 0, 0, .5) -2px -2px 6px inset;
+}
+.toggle > span{
+  position: absolute;
+  left:100%;
+  padding: 0 4px;
+}
+.toggle:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    
+}
+.toggle-enabled{background: green;}
+.toggle-disabled{background: red;}
+.toggle-enabled:before{left: 2px;}
+.toggle-disabled:before{right: 2px;}
+
+

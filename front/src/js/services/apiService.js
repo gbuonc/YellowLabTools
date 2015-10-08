@@ -5,12 +5,14 @@ apiService.factory('API', ['$location', 'Runs', 'Results', function($location, R
     return {
 
         launchTest: function(url, settings) {
+            
             var runObject = {
                 url: url,
                 waitForResponse: false,
                 screenshot: true,
                 jsTimeline: true,
                 device: settings.device,
+                noExternal: settings.noExternal || false,
                 waitForSelector: settings.waitForSelector,
                 cookie: settings.cookie,
                 authUser: settings.authUser,
@@ -24,12 +26,10 @@ apiService.factory('API', ['$location', 'Runs', 'Results', function($location, R
             if (settings.cookie && settings.cookie !== '') {
                 runObject.cookie = settings.cookie;
             }
-
             if (settings.authUser && settings.authUser !== '' && settings.authPass && settings.authPass !== '') {
                 runObject.authUser = settings.authUser;
                 runObject.authPass = settings.authPass;
             }
-
             Runs.save(runObject, function(data) {
                 $location.path('/queue/' + data.runId);
             }, function(response) {
