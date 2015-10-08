@@ -8,6 +8,9 @@
     "email": "gael@gaelmetais.com",
     "url": "http://www.gaelmetais.com"
   },
+"engines":{
+"node": "0.12.7"
+},
   "repository": {
     "type": "git",
     "url": "git://github.com/gmetais/YellowLabTools.git"
