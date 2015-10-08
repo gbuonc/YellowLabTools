@@ -1,5 +1,5 @@
 {
-    "serverPort": 80,
+    "serverPort": 5000,
     "phantomasEngine": "webkit",
     "googleAnalyticsId": "",
 
