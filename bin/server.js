@@ -27,7 +27,7 @@ var frontController         = require('../lib/server/controllers/frontController
 // Let's start the server!
 if (!process.env.GRUNTED) {
     var settings = require('../server_config/settings.json');
-    server.listen(settings.serverPort, function() {
+    server.listen(process.env.PORT || settings.serverPort, function() {
         console.log('Listening on port %d', server.address().port);
 
         // For the tests
